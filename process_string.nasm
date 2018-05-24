@@ -12,8 +12,13 @@ str_beg:resq 1                  ;store addr of string
 
         section     .text
 correct_string:
+
+        ;delete duplicate characters:
+        ;from:  dellllette dupppliccate    cccharaccterss
+        ;to:    delete duplicate characters
+
         ;save using registers
-        ;5 registers pushed, stack aligment is fine
+        ;3 registers pushed, stack aligment is fine
         push rdi
         push rsi
         push rax
@@ -85,7 +90,3 @@ cont:
         pop rax
         pop rsi
         pop rdi
-
-        ;next two command works like lea rdi, strv in masm
-        ;mov rdi, strv          ;pointer to currently procersing symb
-        ;mov rsi, strv          ;used to rewrite string

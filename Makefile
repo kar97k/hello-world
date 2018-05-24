@@ -5,7 +5,7 @@ NASMFLAGS+=-felf64
 all: string_correct
 
 string_correct: main.o process_string.o
-	$(CC) main.o process_string.o -o string_correct
+	$(CC) main.o process_string.o
 
 process_string.o: process_string.nasm
 	$(NASM) $(NASMFLAGS) process_string.nasm
